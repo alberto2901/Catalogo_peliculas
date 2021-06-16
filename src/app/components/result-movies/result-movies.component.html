@@ -1,0 +1,22 @@
+<div class="father">
+
+  <div class="card-imagen">
+    <img src="{{ movie.imagen }}"/>
+  </div>
+
+  <div class="card" *ngIf="movie">
+    <h2>{{ movie.titulo }}</h2>
+
+    <p>{{ movie.info }}</p>
+
+    <ngb-rating class="star" [(rate)]="movie.calificacion"></ngb-rating>
+
+    <div class="split"></div>
+
+    <p>{{ movie.genre }}</p>
+  </div>
+  
+  <div *ngIf="error">
+      <h1>NO SE HA ENCONTRADO LA PELICULA</h1>
+  </div>
+</div>

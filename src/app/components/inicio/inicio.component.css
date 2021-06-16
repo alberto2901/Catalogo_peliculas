@@ -1,0 +1,60 @@
+body{
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+  
+.image {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("../../../assets/background.jpg");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tittle{
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+}
+
+.tittle h2{
+    font-size: 70px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.tittle p{
+    margin-top: 60px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.boton{
+    margin-top: 15px;
+    background-color: #343a40; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 10px;
+}
+

@@ -1,0 +1,46 @@
+.box{
+    position: relative;
+    width: 250px;
+    margin-right: 30px;
+}
+
+.box .box-img{
+    transform: rotateY(0);
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.box:hover .box-img{
+    transform: rotateY(-90deg);
+}
+
+.box .box-img img {
+    width: 250px;
+    height: 380px;
+    border-radius: 10px;
+}
+
+.box .content{
+    color: white;
+    background: rgba(0,0,0,0.8);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 90px 20px;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 10px;
+    transform: rotateY(90deg);
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.box:hover .content{
+    transform: rotateY(0);
+}
+
+.movies{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
