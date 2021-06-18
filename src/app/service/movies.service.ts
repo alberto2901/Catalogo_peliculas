@@ -6,15 +6,15 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class MoviesService {
-  url = 'http://localhost:4000/api';
-
+  url = 'http://localhost:3000/api';
+  
   constructor(private http: HttpClient) {}
 
   getMovies(): Observable<any> {
-    return this.http.get(`${this.url}/movies`);
+    return this.http.get(`${this.url}/peliculas`);
   }
 
   getMovieById(id:string): Observable<any>{
-    return this.http.get(`${this.url}/movie/${id}`);
+    return this.http.get(`${this.url}/peliculas/${id}`);
   }
 }

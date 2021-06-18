@@ -12,11 +12,10 @@
 } */
 
 export interface Movies {
-    _id?: string;
+    id?: string;
     titulo: string;
     imagen: string;
     calificacion: number;
     info: string;
     genre: string;
-    fechaCreacion: string;
 }

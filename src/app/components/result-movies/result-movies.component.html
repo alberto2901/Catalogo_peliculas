@@ -1,22 +1,30 @@
 <div class="father">
-
   <div class="card-imagen">
-    <img src="{{ movie.imagen }}"/>
+    <div class="imagen">
+      <img src="{{ movie.imagen }}"/>
+
+      <div class="rate">
+        <p>Calificacion: <ngb-rating class="star" [(rate)]="movie.calificacion"></ngb-rating></p>
+      </div>
+    </div>
+
+    <div class="todoString">
+      <div class="texto" *ngIf="movie">
+        <div class="titulo">
+          <h2>{{ movie.titulo }}</h2>
+        </div>
+        
+        <div class="description">
+          <p>{{ movie.info }}</p>
+        </div>
+    
+        <div class="genre">
+          <p>{{ movie.genre }}</p>
+        </div>
+      </div>
+    </div>
+    
   </div>
 
-  <div class="card" *ngIf="movie">
-    <h2>{{ movie.titulo }}</h2>
-
-    <p>{{ movie.info }}</p>
-
-    <ngb-rating class="star" [(rate)]="movie.calificacion"></ngb-rating>
-
-    <div class="split"></div>
-
-    <p>{{ movie.genre }}</p>
-  </div>
   
-  <div *ngIf="error">
-      <h1>NO SE HA ENCONTRADO LA PELICULA</h1>
-  </div>
 </div>

@@ -37,13 +37,14 @@ body{
 }
 
 .tittle p{
+
     margin-top: 60px;
     font-size: 20px;
     font-family: 'Montserrat', sans-serif;
 }
 
 .boton{
-    margin-top: 15px;
+    margin-top: 16px;
     background-color: #343a40; /* Green */
     border: none;
     color: white;

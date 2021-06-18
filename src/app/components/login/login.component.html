@@ -361,15 +361,25 @@
 
     <!-- Login Form -->
     <form action="login" method="post">
-      <input type="text" class="fadeIn second" id="nombre_user" name ="nombre_user" placeholder="Usuario" required>
-      <input type="password" class="fadeIn third" class="form-control" id="password" name ="password" placeholder="Contraseña" required>
-      <input type="submit" class="fadeIn fourth mt-4" value="Log In">
+      <input type="text" class="fadeIn second" 
+        [(ngModel)]="nombre"
+        name="nombre"
+        placeholder="Nombre"
+        required="required">
+
+      <input type="password" class="fadeIn third"type="password"
+        [(ngModel)]="password"
+        name="password"
+        placeholder="Contraseña"
+        required="required">
+
+      <input type="submit" class="fadeIn fourth mt-4" (click)="login()" value="Login">
     </form>
 
     <!-- Remind Passowrd -->
     
     <div id="formFooter">
-      <a class="registro underlineHover" routerLink="/register">REGISTRATE</a>
+      <a class="registro underlineHover" routerLink="/register" value="Login">REGISTRATE</a>
     </div>
 
   </div>

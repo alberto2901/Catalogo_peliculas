@@ -25,9 +25,7 @@
   <div class="card" *ngFor="let movie of listMovies">
     <h2>{{ movie.titulo }}</h2>
 
-    <a [routerLink]="['/result-movies', movie._id]"><img src="{{ movie.imagen }}"></a>
-
-    <p>{{ movie.info }}</p>
+    <a [routerLink]="['/result-movies', movie.id]"><img src="{{ movie.imagen }}"></a>
 
     <ngb-rating class="star" [(rate)]="movie.calificacion"></ngb-rating>
 
