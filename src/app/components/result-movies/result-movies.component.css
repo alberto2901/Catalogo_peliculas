@@ -123,6 +123,41 @@
     width: 95%;
 }
 
+.botones{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.primer{
+    width: 30%;
+    background-color: #343a40; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.274);
+}
+
+.segundo{
+    width: 30%;
+    background-color: #343a40; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.274);
+}
+
 
 
 

@@ -1,6 +1,4 @@
 @font-face {
-    font-family: OpenSans-Regular;
-    src: url('../valoraciones/fonts/OpenSans/OpenSans-Regular.ttf'); 
   }
   
   
@@ -94,6 +92,7 @@
   .limiter {
     width: 100%;
     margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
   }
   
   .container-table100 {
@@ -132,13 +131,15 @@
   }
   table * {
     position: relative;
+    font-family: 'Montserrat', sans-serif;
   }
   table td, table th {
     padding-left: 8px;
+    font-family: 'Montserrat', sans-serif;
   }
   table thead tr {
     height: 60px;
-    background: #36304a;
+    background: #2D2D2D;
   }
   table tbody tr {
     height: 50px;
@@ -161,7 +162,7 @@
   
   
   .table100-head th{
-    font-family: OpenSans-Regular;
+    font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     color: #fff;
     line-height: 1.2;
@@ -173,8 +174,8 @@
   }
   
   tbody tr {
-    font-family: OpenSans-Regular;
-    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
     color: #808080;
     line-height: 1.2;
     font-weight: unset;
@@ -187,16 +188,16 @@
   }
   
   .column1 {
-    width: 260px;
+    width: 50px;
     padding-left: 40px;
   }
   
   .column2 {
-    width: 160px;
+    width: 100px;
   }
   
   .column3 {
-    width: 245px;
+    width: 100px;
   }
   
   .column4 {
@@ -215,7 +216,23 @@
     padding-right: 62px;
   }
   
-  
+  .star {
+    position: relative;
+    display: inline-block;
+    color: #cbd3db85;
+    font-size: 1.5rem;
+    margin-right: 10px;
+  }
+  .full {
+      color: #deb0b0;
+  }
+  .half {
+      position: absolute;
+      display: inline-block;
+      overflow: hidden;
+      color: rgb(255, 123, 0);
+  }
+
   @media screen and (max-width: 992px) {
     table {
       display: block;
@@ -238,7 +255,7 @@
       margin-bottom: 0;
     }
     table tbody tr td:before {
-      font-family: OpenSans-Regular;
+      font-family: 'Montserrat', sans-serif;
       font-size: 14px;
       color: #999999;
       line-height: 1.2;
@@ -249,22 +266,31 @@
       top: 0;
     }
     table tbody tr td:nth-child(1):before {
-      content: "Date";
+      content: "ID_Pelicula";
     }
     table tbody tr td:nth-child(2):before {
-      content: "Order ID";
+      content: "Titulo";
     }
     table tbody tr td:nth-child(3):before {
-      content: "Name";
+      content: "Valoracion";
     }
-    table tbody tr td:nth-child(4):before {
-      content: "Price";
+
+    .star {
+      position: relative;
+      display: inline-block;
+      color: #cbd3db85;
+      font-size: 1.5rem;
+      margin-top: -30px;
+      margin-right: 10px;
     }
-    table tbody tr td:nth-child(5):before {
-      content: "Quantity";
+    .full {
+        color: #deb0b0;
     }
-    table tbody tr td:nth-child(6):before {
-      content: "Total";
+    .half {
+        position: absolute;
+        display: inline-block;
+        overflow: hidden;
+        color: rgb(255, 123, 0);
     }
   
     .column4,

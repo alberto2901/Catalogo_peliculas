@@ -23,9 +23,9 @@ export class MoviesService {
     return this.http.post("https://reqres.in/api/auth/login", user);
   }
 
-  register(user: any): Observable<any> {
-    return this.http.post("https://reqres.in/api/register", user);
-  }
+  /* register(user: any): Observable<any> {
+    return this.http.get(`${this.url}/peliculas/${id}`);
+  } */
 
   /* setToken(token: string) {
     this.cookies.set("token", token);

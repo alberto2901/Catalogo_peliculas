@@ -11,6 +11,12 @@
         </ng-template>
 
         <p>Calificacion: <ngb-rating class="star" [(rate)]="movie.calificacion" [starTemplate]="t" [readonly]="true" [max]="5"></ngb-rating>
+          <div>
+            <form class ="botones">
+              <a class="primer" href="{{ movie.imdb }}">IMDB</a>
+              <a class="primer" href="{{ movie.tmdb }}">TMDB</a>
+            </form>
+          </div>
       </div>
     </div>
 

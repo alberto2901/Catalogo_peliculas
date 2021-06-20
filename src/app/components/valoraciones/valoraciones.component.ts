@@ -6,7 +6,8 @@ import { NgbRatingConfig } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-valoraciones',
   templateUrl: './valoraciones.component.html',
-  styleUrls: ['./valoraciones.component.css']
+  styleUrls: ['./valoraciones.component.css'],
+  providers: [NgbRatingConfig]
 })
 export class ValoracionesComponent implements OnInit {
 
