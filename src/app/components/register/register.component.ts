@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MoviesService } from 'src/app/service/movies.service';
 
 @Component({
   selector: 'app-register',
@@ -7,19 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  nombre: string;
+  email: string;
   password: string;
   confirmPassword: string;
 
-  constructor() { }
+  constructor(public movies: MoviesService) { }
 
   ngOnInit(): void {
 
   }
 
-  register() {
-    console.log(this.nombre);
-    console.log(this.password);
-  }
+  /* register() {
+    const user = { email: this.email, password: this.password };
+    this.movies.register(user).subscribe(data => {
+      this.movies.setToken(data.token);
+    });
+  } */
 
 }

@@ -2,7 +2,7 @@
   <div class="fath">
     <div class="search_wrap">
 			<div class="search_box">
-				<input type="text" class="input" placeholder="Search...">
+				<input type="text" class="input" [(ngModel)]="search" placeholder="Search...">
 				<div class="btn btn_common">
 					<i class="fas fa-search"></i>
 				</div>
@@ -13,7 +13,7 @@
   <div class="category">
     <mat-form-field appearance="fill">
       <mat-label>Toppings</mat-label>
-      <mat-select [formControl]="movieGenre" multiple>
+      <mat-select [(ngModel)]="gen" (selectionChange)="filterGenre()" [formControl]="movieGenre" multiple>
         <mat-option *ngFor="let gen of genreList" [value]="gen">{{ gen }}</mat-option>
       </mat-select>
     </mat-form-field>
@@ -22,12 +22,18 @@
 </div>
 
 <div class="father">
-  <div class="card" *ngFor="let movie of listMovies">
+  <div class="card" *ngFor="let movie of genMovies | searchPipe:search" >
     <h2>{{ movie.titulo }}</h2>
 
+    <ng-template #t let-fill="fill">
+      <span class="star" [class.full]="fill === 100">
+        <span class="half" [style.width.%]="fill">&#9733;</span>&#9733;
+      </span>
+    </ng-template>
+    
     <a [routerLink]="['/result-movies', movie.id]"><img src="{{ movie.imagen }}"></a>
 
-    <ngb-rating class="star" [(rate)]="movie.calificacion"></ngb-rating>
+    <ngb-rating class="star" [(rate)]="movie.calificacion" [starTemplate]="t" [readonly]="true" [max]="5"></ngb-rating>
 
     <div class="split"></div>
 

@@ -11,8 +11,9 @@ import { BodyComponent } from './components/body/body.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatSelectModule } from '@angular/material/select';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
-
+import { YouTubePlayerModule } from '@angular/youtube-player';
 import { HttpClientModule } from '@angular/common/http';
+
 import { ListarmoviesComponent } from './components/list-movies/list-movies.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { ValoracionesComponent } from './components/valoraciones/valoraciones.component';
@@ -21,6 +22,7 @@ import { ResultmoviesComponent } from './components/result-movies/result-movies.
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { SearchPipePipe } from './components/pipe/search-pipe.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +35,7 @@ import { RegisterComponent } from './components/register/register.component';
     ResultmoviesComponent,
     LoginComponent,
     RegisterComponent,
+    SearchPipePipe
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,8 @@ import { RegisterComponent } from './components/register/register.component';
     NgbModule,
     MatSelectModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    YouTubePlayerModule
   ],
   providers: [
 

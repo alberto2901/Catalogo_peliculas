@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NgbRatingConfig } from '@ng-bootstrap/ng-bootstrap';
+import { DomSanitizer } from '@angular/platform-browser';
+import { YouTubePlayerModule } from '@angular/youtube-player';
 
 import { MoviesService } from 'src/app/service/movies.service';
 import { Movies } from 'src/app/models/movie';
@@ -14,19 +16,30 @@ import { Movies } from 'src/app/models/movie';
 export class ResultmoviesComponent implements OnInit {
   movie: Movies;
   error: boolean;
+  listMovies: Movies[] = [];
 
   constructor(
     private _route: ActivatedRoute,
     private _moviesService: MoviesService,
-    private config: NgbRatingConfig
+    private config: NgbRatingConfig,
+    private dom: DomSanitizer
   ) {
-    this.config.max = 10;
-    this.config.readonly = true;
+
   }
 
   ngOnInit(): void {
+    let apiLoaded = false;
     let id = this._route.snapshot.paramMap.get('id');
     this.getMovieById(id);
+
+    if (!apiLoaded) {
+      // This code loads the IFrame Player API code asynchronously, according to the instructions at
+      // https://developers.google.com/youtube/iframe_api_reference#Getting_Started
+      const tag = document.createElement('script');
+      tag.src = 'https://www.youtube.com/iframe_api';
+      document.body.appendChild(tag);
+      apiLoaded = true;
+    }
   }
 
   getMovieById(id: string) {
@@ -40,5 +53,9 @@ export class ResultmoviesComponent implements OnInit {
         this.error = true;
       }
     );
+  }
+
+  getEmbedUrl(idFilm: string){
+    return this.dom.bypassSecurityTrustResourceUrl(idFilm);
   }
 }

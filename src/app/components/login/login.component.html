@@ -361,10 +361,10 @@
 
     <!-- Login Form -->
     <form action="login" method="post">
-      <input type="text" class="fadeIn second" 
-        [(ngModel)]="nombre"
-        name="nombre"
-        placeholder="Nombre"
+      <input type="email" class="fadeIn second" 
+        [(ngModel)]="email"
+        name="email"
+        placeholder="Email"
         required="required">
 
       <input type="password" class="fadeIn third"type="password"
@@ -373,7 +373,7 @@
         placeholder="Contraseña"
         required="required">
 
-      <input type="submit" class="fadeIn fourth mt-4" (click)="login()" value="Login">
+      <!-- <input type="submit" class="fadeIn fourth mt-4" (click)="login()" value="Login"> -->
     </form>
 
     <!-- Remind Passowrd -->

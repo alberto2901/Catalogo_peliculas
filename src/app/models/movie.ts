@@ -1,21 +1,11 @@
-/* export class movie{
-    _id?: number;
-    titulo: string;
-    imagen: string;
-    calificacion: string;
-
-    constructor(titulo: string, imagen: string, calificacion: string){
-        this.titulo = titulo;
-        this.imagen = imagen;
-        this.calificacion = calificacion;
-    }
-} */
-
 export interface Movies {
     id?: string;
     titulo: string;
+    fecha: string;
     imagen: string;
     calificacion: number;
     info: string;
+    info2: string;
     genre: string;
+    video: string;
 }

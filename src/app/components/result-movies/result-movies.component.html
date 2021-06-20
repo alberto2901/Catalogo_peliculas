@@ -4,25 +4,42 @@
       <img src="{{ movie.imagen }}"/>
 
       <div class="rate">
-        <p>Calificacion: <ngb-rating class="star" [(rate)]="movie.calificacion"></ngb-rating></p>
+        <ng-template #t let-fill="fill">
+          <span class="star" [class.full]="fill === 100">
+            <span class="half" [style.width.%]="fill">&#9733;</span>&#9733;
+          </span>
+        </ng-template>
+
+        <p>Calificacion: <ngb-rating class="star" [(rate)]="movie.calificacion" [starTemplate]="t" [readonly]="true" [max]="5"></ngb-rating>
       </div>
     </div>
 
     <div class="todoString">
       <div class="texto" *ngIf="movie">
         <div class="titulo">
-          <h2>{{ movie.titulo }}</h2>
+          <h2>{{ movie.titulo }} ({{movie.fecha}})</h2>
         </div>
         
         <div class="description">
-          <p>{{ movie.info }}</p>
+          <p class="info1">{{ movie.info }}</p>
+          <p class="info2">{{ movie.info2 }}</p>
+
+          <div class="genre">
+            <p>Genero: {{ movie.genre }}</p>
+          </div>
         </div>
     
-        <div class="genre">
-          <p>{{ movie.genre }}</p>
+        <div class="video">
+          <youtube-player videoId="{{ movie.video }}" ></youtube-player>
+          <!-- <iframe width="700" height="350" src="https://www.youtube.com/embed/LjLamj-b0I8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
         </div>
+        
       </div>
     </div>
+    
+  </div>
+
+  <div class="comentarios">
     
   </div>
 

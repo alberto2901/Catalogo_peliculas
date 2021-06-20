@@ -359,10 +359,10 @@ input[type=password]:placeholder {
  
     <!-- Login Form -->
    	<form method="post">
-      <input type="text" class="fadeIn second" 
-      [(ngModel)]="nombre"
-      name="nombre"
-      placeholder="Nombre"
+      <input type="email" class="fadeIn second" 
+      [(ngModel)]="email"
+      name="email"
+      placeholder="Email"
       required="required">
 
     <input type="password" class="fadeIn third"type="password"
@@ -377,7 +377,7 @@ input[type=password]:placeholder {
       placeholder="Repite la contraseña"
       required="required">
 
-      <input type="submit" class="fadeIn fourth mt-4" value="Registrarse" (click)="register()">
+      <!-- <input type="submit" class="fadeIn fourth mt-4" value="Registrarse" (click)="register()"> -->
     </form>
 
   </div>

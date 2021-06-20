@@ -12,10 +12,12 @@ import { MoviesService } from 'src/app/service/movies.service';
 })
 export class ListarmoviesComponent implements OnInit {
   listMovies: Movies[] = [];
+  genMovies: Movies[] = [];
+  gen: string[]=[]; 
+  search: string = '';
 
   constructor(private _moviesService: MoviesService, config: NgbRatingConfig) {
-    config.max = 10;
-    config.readonly = true;
+    
   }
   
   ngOnInit(): void {
@@ -28,6 +30,7 @@ export class ListarmoviesComponent implements OnInit {
       (data: Movies[]) => {
         console.log(data);
         this.listMovies = data;
+        this.genMovies = this.listMovies;
       },
       (error) => {
         console.log(error);
@@ -40,12 +43,27 @@ export class ListarmoviesComponent implements OnInit {
   genreList: string[] = ['Terror', 'Comedia', 'Accion', 'Ciencia Ficcion', 'Slasher', 'Infantil', 'Belico', 'Suspense'];
 
 
-  filterGenre(array){
-    const result = array.filter(array == 'Terror');
-  }
-  /* filterGenre(arrayMovies){
-    const result = arrayMovies.filter(arrayMovies. => word.length > 6);
+  filterGenre(){
+    this.genMovies = [];
+    
+    let añadir = true;
+    this.listMovies.forEach( p => {
+      añadir = true;
+        this.gen.forEach(g => {
+            if(p.genre.includes(g) && añadir){
+                añadir = true;
+            }else{
+                añadir = false;
+            }
+        })
 
-    console.log(result);
-  } */
+        if(añadir){
+            this.genMovies.push(p);
+        }
+    })
+
+    console.log(this.genMovies);
+    
+  }
+  
 }

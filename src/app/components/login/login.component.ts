@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MoviesService } from 'src/app/service/movies.service'; 
 
 @Component({
   selector: 'app-login',
@@ -7,17 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  nombre: string;
+  email: string;
   password: string;
 
-  constructor() { }
+  constructor(public movies: MoviesService) { }
 
   ngOnInit(): void {
   }
 
-  login() {
-    console.log(this.nombre);
-    console.log(this.password);
-  }
+  /* login() {
+    const user = { email: this.email, password: this.password };
+    this.movies.login(user).subscribe(data => {
+      this.movies.setToken(data.token);
+    });
+  } */
 
 }
