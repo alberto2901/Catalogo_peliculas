@@ -15,8 +15,8 @@ const routes: Routes = [
   { path: 'result-movies/:id', component: ResultmoviesComponent},
   { path: 'valoraciones', component: ValoracionesComponent},
   { path: 'contacta', component: ValoracionesComponent}, 
-  { path: 'login', component: LoginComponent},
-  { path: 'register', component: RegisterComponent},
+  { path: 'auth/login', component: LoginComponent},
+  { path: 'auth/register', component: RegisterComponent},
 ];
 
 @NgModule({

@@ -361,25 +361,26 @@
 
     <!-- Login Form -->
     <form action="login" method="post">
-      <input type="email" class="fadeIn second" 
-        [(ngModel)]="email"
+      <input type="text" class="fadeIn second" 
+        [(ngModel)]="usuario.name"
         name="email"
-        placeholder="Email"
+        placeholder="Nombre"
         required="required">
 
       <input type="password" class="fadeIn third"type="password"
-        [(ngModel)]="password"
+        [(ngModel)]="usuario.password"
         name="password"
         placeholder="Contraseña"
         required="required">
 
+      <p class="text-danger" *ngIf="error">Usuario y/o contraseña no válidos</p>
       <!-- <input type="submit" class="fadeIn fourth mt-4" (click)="login()" value="Login"> -->
     </form>
 
     <!-- Remind Passowrd -->
     
     <div id="formFooter">
-      <a class="registro underlineHover" routerLink="/register" value="Login">REGISTRATE</a>
+      <a class="registro underlineHover" [routerLink]="['/auth/register']" value="Login">REGISTRATE</a>
     </div>
 
   </div>

@@ -20,7 +20,7 @@ export class MoviesService {
   }
 
   login(user: any): Observable<any> {
-    return this.http.post("https://reqres.in/api/login", user);
+    return this.http.post("https://reqres.in/api/auth/login", user);
   }
 
   register(user: any): Observable<any> {
