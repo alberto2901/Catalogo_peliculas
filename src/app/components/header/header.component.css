@@ -9,8 +9,15 @@
     justify-content: flex-end;
 }
 
+.navbar h1{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 15px;
+    font-size: 1.7rem;
+}
+
 nav.navbar {
-    
     font-size: 15px;
     font-family: 'Montserrat', sans-serif;
     /* background-color: #4d1e18 !important; */

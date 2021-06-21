@@ -1,0 +1,75 @@
+<div class="father">
+    <div class="col-md-4 offset-md-2">
+        <div class="card">
+            <div class="card-body">
+            <form action="">
+
+                <div class="form-group">
+                    <input type="url" name="imagen" [(ngModel)]="movie.imagen" placeholder="Imagen" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <input name="title" [(ngModel)]="movie.titulo" placeholder="Titulo" class="form-control" autofocus>
+                </div>
+
+                <div class="form-group">
+                    <input name="fecha" [(ngModel)]="movie.fecha" placeholder="Fecha de estreno" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <input name="calificacion" [(ngModel)]="movie.calificacion" placeholder="Calificacion (0/5)" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <input name="imdb" [(ngModel)]="movie.imdb" placeholder="Link IMDb" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <input name="tmdb" [(ngModel)]="movie.tmdb" placeholder="Link TMDb" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <textarea name="description" [(ngModel)]="movie.info" rows="2" placeholder="Description" class="form-control"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <textarea name="description2" [(ngModel)]="movie.info2" rows="2" placeholder="Segundo Parrafo" class="form-control"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <input name="genre" [(ngModel)]="movie.genre" placeholder="Genero" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <input name="video" [(ngModel)]="movie.video" placeholder="Trailer Pelicula" class="form-control">
+                </div>
+
+                <button class="btn btn-primary btn-block" (click)="updateGame()">
+                Update
+                </button>
+            </form>
+            </div>
+        </div>
+    </div>
+    
+      
+    <div class="segunda">
+        <div class="col-md-4">
+            <div class="card card-body text-center">
+              <h3>{{movie.titulo == '' ? 'Introduce el titulo' : movie.titulo}}</h3>
+              <img [src]="movie.imagen == '' ? '/assets/noimage.png' : movie.imagen" alt="No Image" class="card-img-top">
+              
+              <ng-template #t let-fill="fill">
+                <span class="star" [class.full]="fill === 100">
+                  <span class="half" [style.width.%]="fill">&#9733;</span>&#9733;
+                </span>
+              </ng-template>
+              
+              <ngb-rating class="star" [(rate)]="movie.calificacion" [starTemplate]="t" [readonly]="true" [max]="5"></ngb-rating>
+              <p>{{movie.genre == ''  ? 'Introduce el genero' : movie.genre}}</p>
+            </div>
+          </div>
+    </div>
+      
+</div>
+

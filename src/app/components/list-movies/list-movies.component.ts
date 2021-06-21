@@ -16,6 +16,8 @@ export class ListarmoviesComponent implements OnInit {
   gen: string[]=[]; 
   search: string = '';
 
+  movies: any = [];
+
   constructor(private _moviesService: MoviesService, config: NgbRatingConfig) {
     
   }
@@ -31,6 +33,7 @@ export class ListarmoviesComponent implements OnInit {
         console.log(data);
         this.listMovies = data;
         this.genMovies = this.listMovies;
+        this.movies = data;
       },
       (error) => {
         console.log(error);
@@ -40,7 +43,25 @@ export class ListarmoviesComponent implements OnInit {
   
   movieGenre = new FormControl();
 
-  genreList: string[] = ['Terror', 'Comedia', 'Accion', 'Ciencia Ficcion', 'Slasher', 'Infantil', 'Belico', 'Suspense'];
+  genreList: string[] = [
+    'Terror', 
+    'Comedia', 
+    'Accion', 
+    'Ciencia Ficcion', 
+    'Slasher', 
+    'Infantil', 
+    'Belico', 
+    'Suspense', 
+    'Drama', 
+    'Horror', 
+    'Musical', 
+    'Western', 
+    'Animacion',
+    'Comedia Romantica',
+    'Fantasia',
+    'Policiaco',
+    'Aventura'
+  ];
 
 
   filterGenre(){
@@ -64,6 +85,17 @@ export class ListarmoviesComponent implements OnInit {
 
     console.log(this.genMovies);
     
+  }
+
+  deleteGame(id: string) {
+    this._moviesService.deleteGame(id)
+      .subscribe(
+        res => {
+          console.log(res);
+          this.getMovies();
+        },
+        err => console.error(err)
+      )
   }
   
 }

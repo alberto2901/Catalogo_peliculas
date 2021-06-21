@@ -24,6 +24,9 @@ export class ValoracionesComponent implements OnInit {
     this.getMovies();
   }
 
+  orderByRate(){
+    /* let result = numbers.filter(v => Number.isInteger(v as number)); */
+  }
 
   getMovies() {
     this._moviesService.getMovies().subscribe(

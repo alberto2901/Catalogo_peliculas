@@ -6,6 +6,8 @@ import { ResultmoviesComponent } from './components/result-movies/result-movies.
 import { ValoracionesComponent } from './components/valoraciones/valoraciones.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { ContactaComponent } from './components/contacta/contacta.component';
+import { UpdateContactaComponent } from './components/update-contacta/update-contacta.component';
 
 const routes: Routes = [
   { path: '', component: InicioComponent},
@@ -14,7 +16,8 @@ const routes: Routes = [
   { path: 'result-movies', component: ResultmoviesComponent},
   { path: 'result-movies/:id', component: ResultmoviesComponent},
   { path: 'valoraciones', component: ValoracionesComponent},
-  { path: 'contacta', component: ValoracionesComponent}, 
+  { path: 'contacta', component: ContactaComponent},
+  { path: 'update/:id', component: UpdateContactaComponent},  
   { path: 'auth/login', component: LoginComponent},
   { path: 'auth/register', component: RegisterComponent},
 ];

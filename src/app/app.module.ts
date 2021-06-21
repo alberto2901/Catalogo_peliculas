@@ -23,6 +23,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { SearchPipePipe } from './components/pipe/search-pipe.pipe';
+import { ContactaComponent } from './components/contacta/contacta.component';
+import { UpdateContactaComponent } from './components/update-contacta/update-contacta.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +37,9 @@ import { SearchPipePipe } from './components/pipe/search-pipe.pipe';
     ResultmoviesComponent,
     LoginComponent,
     RegisterComponent,
-    SearchPipePipe
+    SearchPipePipe,
+    ContactaComponent,
+    UpdateContactaComponent
   ],
   imports: [
     BrowserModule,

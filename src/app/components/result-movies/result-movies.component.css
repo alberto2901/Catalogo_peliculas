@@ -112,16 +112,6 @@
     width: 87%;
 }
 
-.comentarios{
-    border-radius: 15px;
-    background-color: #2D2D2D;
-    padding: 1px 10px;
-    margin: 50px 50px;
-    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.274);
-    transition: 0.3s;
-    font-family: 'Montserrat', sans-serif;
-    width: 95%;
-}
 
 .botones{
     margin-top: 30px;
