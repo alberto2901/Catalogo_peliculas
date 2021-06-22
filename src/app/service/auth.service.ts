@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, ReplaySubject } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
-import { Usuario, UsuarioResponse } from '../models/usuario';
+import { Usuario} from '../models/usuario';
 import { MoviesService } from './movies.service';
 
 @Injectable({

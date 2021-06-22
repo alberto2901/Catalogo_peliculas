@@ -18,8 +18,8 @@ const routes: Routes = [
   { path: 'valoraciones', component: ValoracionesComponent},
   { path: 'contacta', component: ContactaComponent},
   { path: 'update/:id', component: UpdateContactaComponent},  
-  { path: 'auth/login', component: LoginComponent},
-  { path: 'auth/register', component: RegisterComponent},
+  { path: 'login', component: LoginComponent},
+  { path: 'register', component: RegisterComponent},
 ];
 
 @NgModule({

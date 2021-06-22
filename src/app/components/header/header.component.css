@@ -1,9 +1,3 @@
-
-.navbar img{
-    width: 200px;
-    margin-right: 10px;
-}
-
 .navbar{
     flex-flow: row wrap;
     justify-content: flex-end;
@@ -26,6 +20,12 @@ nav.navbar {
 
 a:hover {
     color: orange;
+}
+
+@media (max-width: 1039px) {
+    .navbar{
+        width: 100%;
+    }
 }
 
 

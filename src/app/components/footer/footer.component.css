@@ -36,7 +36,8 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 1rem 0 3rem 0;
+    margin-top: 20px;
+    margin-right: 40px;
 }
 
 .socials li{

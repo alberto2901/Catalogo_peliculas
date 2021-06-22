@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Movies } from '../models/movie';
+import { Usuario } from '../models/usuario';
 /* import { CookieService } from "ngx-cookie-service"; */
 
 @Injectable({
@@ -28,13 +29,13 @@ export class MoviesService {
     return this.http.post(`${this.url}/peliculas`, film);
   }
 
+  register(user: Usuario) {
+    return this.http.post(`${this.url}/usuario`, user);
+  }
+
   updateGame(id: string|number, updatedGame: Movies): Observable<any> {
     return this.http.put(`${this.url}/peliculas/${id}`, updatedGame);
   }
-
-  /* register(user: any): Observable<any> {
-    return this.http.get(`${this.url}/peliculas/${id}`);
-  } */
 
   /* setToken(token: string) {
     this.cookies.set("token", token);

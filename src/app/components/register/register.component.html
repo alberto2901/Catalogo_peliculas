@@ -359,19 +359,25 @@ input[type=password]:placeholder {
  
     <!-- Login Form -->
    	<form method="post">
-      <input type="email" class="fadeIn second" 
+      <input type="text" class="fadeIn second" 
       [(ngModel)]="nuevoUsuario.name"
-      name="email"
-      placeholder="Email"
+      name="nombre"
+      placeholder="Nombre Usuario"
       required="required">
 
-    <input type="password" class="fadeIn third"type="password"
+    <input type="password" class="fadeIn third"
       [(ngModel)]="nuevoUsuario.password"
       name="password"
       placeholder="Contraseña"
       required="required">
 
-      <!-- <input type="submit" class="fadeIn fourth mt-4" value="Registrarse" (click)="register()"> -->
+    <input type="text" class="fadeIn third"
+      [(ngModel)]="nuevoUsuario.avatar"
+      name="avatar"
+      placeholder="Foto de Avatar"
+      required="required">
+
+      <input type="submit" class="fadeIn fourth mt-4" value="Registrarse" (click)="register()">
     </form>
 
   </div>
